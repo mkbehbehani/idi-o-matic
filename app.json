@@ -2,18 +2,18 @@
   "addons": [
 
   ],
-  "buildpacks": [
-    {
-      "url": "heroku/ruby"
-    }
-  ],
+  "buildpacks": [{
+    "url": "heroku/ruby"
+  }],
   "description": "",
-  "env": {
-  },
+  "env": {},
   "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
   },
   "name": "idi-o-matic",
-  "scripts": {
-  },
+  "scripts": {},
   "stack": "heroku-18"
 }
