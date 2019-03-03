@@ -8,7 +8,6 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -29,7 +28,9 @@ Rails.application.configure do
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
-
+  config.github_app_identifier = Rails.application.credentials.github_dev_app_identifier!
+  config.github_private_key = OpenSSL::PKey::RSA.new(Rails.application.credentials.github_dev_private_key!.gsub('\n', "\n"))
+  config.github_webhook_secret = Rails.application.credentials.github_dev_webhook_secret!
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

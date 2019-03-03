@@ -30,7 +30,9 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-
+  config.github_app_identifier = 1
+  config.github_private_key = OpenSSL::PKey::RSA.new 2048
+  config.github_webhook_secret = 1
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

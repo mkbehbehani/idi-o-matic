@@ -55,7 +55,9 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
+  config.github_app_identifier = Rails.application.credentials.github_app_identifier!
+  config.github_private_key = OpenSSL::PKey::RSA.new(Rails.application.credentials.github_private_key!.gsub('\n', "\n"))
+  config.github_webhook_secret = Rails.application.credentials.github_webhook_secret!
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
