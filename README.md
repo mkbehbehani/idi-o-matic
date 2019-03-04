@@ -19,11 +19,11 @@
 - Used the GitHub GraphQL API and starter app for initial research.
 
 ### Techniques
-- Designed message behavior between classes, using the sequence diagram design technique recommended in
+- Designed message behavior between classes using the sequence diagram design technique recommended in
 [Practical Object-Oriented Design](https://www.poodr.com/) by [Sandi Metz](https://www.sandimetz.com/):
 ![sequence-diagram](app/assets/images/sequence-diagram.png)
 
-- Class dependencies. Good for now, but can be reduced further through factories once we add other search services:
+- Class dependency analysis. Good for now, but can be reduced further through factories once we add other search services:
 ![dependency-diagram](app/assets/images/dependency-diagram.png)
 
 ### Technology
