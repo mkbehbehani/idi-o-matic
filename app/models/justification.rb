@@ -5,7 +5,7 @@ class Justification
   include ActionView::Helpers
 
   validates_presence_of :match, :forks_count, :stargazers_count, :organization_followers_count, :org_name, :repo_name
-  validates_numericality_of :match, greater_than_or_equal_to: 0.49
+  validates_numericality_of :match, greater_than_or_equal_to: 0.45
   validates_numericality_of :forks_count, :stargazers_count, :organization_followers_count
   attr_reader :match, :forks_count, :stargazers_count, :organization_followers_count, :influential_org, :org_name, :repo_name, :description
 
